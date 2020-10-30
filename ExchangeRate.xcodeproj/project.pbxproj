@@ -13,6 +13,7 @@
 		C363DF472548264500EF193A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C363DF452548264500EF193A /* Main.storyboard */; };
 		C363DF492548264A00EF193A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C363DF482548264A00EF193A /* Assets.xcassets */; };
 		C363DF4C2548264A00EF193A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C363DF4A2548264A00EF193A /* LaunchScreen.storyboard */; };
+		C3B41BE92549DE910039B97B /* ExchangeData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3B41BE82549DE910039B97B /* ExchangeData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		C363DF482548264A00EF193A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C363DF4B2548264A00EF193A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C363DF4D2548264A00EF193A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C3B41BE82549DE910039B97B /* ExchangeData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				C363DF3F2548264500EF193A /* AppDelegate.swift */,
 				C363DF412548264500EF193A /* SceneDelegate.swift */,
 				C363DF432548264500EF193A /* ViewController.swift */,
+				C3B41BE82549DE910039B97B /* ExchangeData.swift */,
 				C363DF452548264500EF193A /* Main.storyboard */,
 				C363DF482548264A00EF193A /* Assets.xcassets */,
 				C363DF4A2548264A00EF193A /* LaunchScreen.storyboard */,
@@ -139,6 +142,7 @@
 			files = (
 				C363DF442548264500EF193A /* ViewController.swift in Sources */,
 				C363DF402548264500EF193A /* AppDelegate.swift in Sources */,
+				C3B41BE92549DE910039B97B /* ExchangeData.swift in Sources */,
 				C363DF422548264500EF193A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,12 +291,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4R9ZK234QB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neviplay.ExchangeRate.ExchangeRate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -306,12 +311,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4R9ZK234QB;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = ExchangeRate/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.neviplay.ExchangeRate.ExchangeRate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

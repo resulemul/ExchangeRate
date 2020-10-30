@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CurencyRate-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ExchangeRate" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="LMs-fF-pHS">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bwk-ul-hjF">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="852"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="SS7-fw-TSD">
+                                                <rect key="frame" x="81.5" y="327.5" width="251.5" height="197"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hh8-pq-gps">
+                                                        <rect key="frame" x="42.5" y="0.0" width="166" height="38"/>
+                                                        <subviews>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PDf-Ik-4ET">
+                                                                <rect key="frame" x="0.0" y="0.0" width="52" height="38"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                                                <state key="normal" title="USD">
+                                                                    <color key="titleColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="changeCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oSR-e7-VaF"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D9I-az-Z9d">
+                                                                <rect key="frame" x="57" y="8" width="52" height="22"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                                <color key="tintColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <state key="normal">
+                                                                    <imageReference key="image" image="repeat" catalog="system" symbolScale="large"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="currencySwitchTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N48-9f-Upg"/>
+                                                                </connections>
+                                                            </button>
+                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hK8-IB-LyZ">
+                                                                <rect key="frame" x="114" y="0.0" width="52" height="38"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                                                <state key="normal" title="TRY">
+                                                                    <color key="titleColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                </state>
+                                                                <connections>
+                                                                    <action selector="changeCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sVP-JJ-a4s"/>
+                                                                </connections>
+                                                            </button>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WUZ-Ot-67F">
+                                                        <rect key="frame" x="76" y="44" width="99" height="30"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="30" id="a7I-oI-Nux"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="25"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="1 USD = ">
+                                                            <color key="titleColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        </state>
+                                                        <connections>
+                                                            <action selector="calculateAmount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dsz-Tr-5ie"/>
+                                                        </connections>
+                                                    </button>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="firstBaseline" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="shY-HA-kpU">
+                                                        <rect key="frame" x="0.0" y="80" width="251.5" height="117"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.02" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="24" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gTB-Fq-Ihl">
+                                                                <rect key="frame" x="0.0" y="0.0" width="251.5" height="94.5"/>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="115"/>
+                                                                <color key="textColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LVZ-bn-a80">
+                                                                <rect key="frame" x="210" y="102.5" width="41.5" height="14.5"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="14.5" id="Tyu-YQ-fTP"/>
+                                                                </constraints>
+                                                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
+                                                                <color key="textColor" red="0.92549019610000005" green="0.92549019610000005" blue="0.92549019610000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="gTB-Fq-Ihl" firstAttribute="top" secondItem="shY-HA-kpU" secondAttribute="top" id="RmG-BG-jUu"/>
+                                                            <constraint firstItem="gTB-Fq-Ihl" firstAttribute="leading" secondItem="shY-HA-kpU" secondAttribute="leading" id="YHc-XB-74o"/>
+                                                            <constraint firstItem="LVZ-bn-a80" firstAttribute="trailing" secondItem="gTB-Fq-Ihl" secondAttribute="trailing" id="ldL-Ww-am6"/>
+                                                            <constraint firstItem="LVZ-bn-a80" firstAttribute="top" secondItem="shY-HA-kpU" secondAttribute="top" constant="102.5" id="tEx-KM-3d1"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                </subviews>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLX-af-aU3">
+                                                <rect key="frame" x="354" y="8.5" width="50" height="51"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="BIu-SP-3YU"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Xzr-4K-Huq"/>
+                                                </constraints>
+                                                <color key="tintColor" red="0.89411764709999997" green="0.2470588235" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <state key="normal" backgroundImage="goforward" catalog="system"/>
+                                                <connections>
+                                                    <action selector="updateButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gtq-f2-ist"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.10588235294117647" green="0.10588235294117647" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="QLX-af-aU3" secondAttribute="trailing" constant="10" id="9Bs-bS-x5d"/>
+                                            <constraint firstItem="SS7-fw-TSD" firstAttribute="centerX" secondItem="bwk-ul-hjF" secondAttribute="centerX" id="WXB-Wd-3sA"/>
+                                            <constraint firstItem="QLX-af-aU3" firstAttribute="top" secondItem="bwk-ul-hjF" secondAttribute="top" constant="10" id="kDO-UX-hjw"/>
+                                            <constraint firstItem="SS7-fw-TSD" firstAttribute="centerY" secondItem="bwk-ul-hjF" secondAttribute="centerY" id="yqF-ES-cxi"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.086274509803921567" green="0.14117647058823529" blue="0.27843137254901962" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="LMs-fF-pHS" secondAttribute="bottom" id="V3z-xt-fLd"/>
+                            <constraint firstItem="LMs-fF-pHS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zlw-vS-iOz"/>
+                            <constraint firstItem="LMs-fF-pHS" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kKq-0P-kE1"/>
+                            <constraint firstItem="LMs-fF-pHS" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qhG-aI-4sw"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="CurencyRate" id="d6h-3S-AkX"/>
+                    <connections>
+                        <outlet property="baseCurencyButtonChange" destination="WUZ-Ot-67F" id="glM-U1-MMu"/>
+                        <outlet property="baseCurrency" destination="PDf-Ik-4ET" id="bjy-5G-fT0"/>
+                        <outlet property="convertedCurrency" destination="LVZ-bn-a80" id="lGw-cp-BjW"/>
+                        <outlet property="convertedCurrencyAmount" destination="gTB-Fq-Ihl" id="fFM-HA-B0I"/>
+                        <outlet property="convertingCurrency" destination="hK8-IB-LyZ" id="J8U-z0-JGa"/>
+                        <outlet property="switchCurrency" destination="D9I-az-Z9d" id="HCT-gE-nYq"/>
+                        <outlet property="update" destination="QLX-af-aU3" id="9SB-bd-vZw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1797.1014492753625" y="61.607142857142854"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="goforward" catalog="system" width="121" height="128"/>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+    </resources>
 </document>
